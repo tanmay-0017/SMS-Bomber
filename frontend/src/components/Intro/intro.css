@@ -1,0 +1,52 @@
+.spamBox {
+    background-color: #f5f5f5;
+    align-items: center;
+    justify-content: center;
+    max-width: 50vh;
+    margin: 10rem auto;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.boxHeading {
+    color: #3498db;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-block: 10px;
+}
+
+input[type='tel'],
+input[type='number'] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.submitBtn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submitBtn:hover {
+    background-color: #1e80c1;
+}
+  
