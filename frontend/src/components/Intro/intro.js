@@ -1,8 +1,8 @@
 import { useState } from "react";
 import React from 'react'
 import './intro.css'
-import { toast, Flip } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast, Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
 
@@ -77,6 +77,7 @@ const Intro = () => {
         <br/><br/>
         <input type='submit' className='submitBtn' />
       </form>
+      <ToastContainer/>
     </div>
   )
 }

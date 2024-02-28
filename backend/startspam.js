@@ -10,6 +10,9 @@ const first = async (req, res) => {
     await callApi4(mobile);
     await callApi5(mobile);
     await callApi6(mobile);
+    await callApi7(mobile);
+    await callApi8(mobile);
+    await callApi9(mobile);
 
     return res.status(200).send(`Hi ${req.body.mobile}`);
   } catch (error) {
@@ -110,5 +113,59 @@ const callApi6 = async (mobile) => {
     console.error("API 6 Error:", error.message);
   }
 };
+
+const callApi7 = async (mobile) => {
+  try {
+    const apiUrl = "https://www.urbanclap.com/api/v2/growth/profile/generateOTPv2";
+    const requestData = {
+        "city_key": null,
+        "countryId": "IND",
+        "customer": {
+            "phone": {
+            "isd_code": "+91",
+            "phone_wo_isd": mobile
+            }
+        },
+        "resend": false,
+        "source": "phone"
+    };
+
+    await axios.post(apiUrl, requestData);
+  } catch (error) {
+    console.error("API 7 Error:", error.message);
+  }
+};
+
+const callApi8 = async (mobile) => {
+  try {
+    const apiUrl = "https://production.apna.co/api/userprofile/v1/otp/";
+    const requestData = {
+        "hash_type": "original",
+        "phone_number": mobile,
+        "request_id": "1709108042942",
+        "retries": 1
+    };
+
+    await axios.post(apiUrl, requestData);
+  } catch (error) {
+    console.error("API 8 Error:", error.message);
+  }
+};
+
+const callApi9 = async (mobile) => {
+  try {
+    const apiUrl = "https://dashboard.razorpay.com/user/signin/otp";
+    const requestData = {
+        "contact_mobile" : mobile
+    };
+
+    await axios.post(apiUrl, requestData);
+  } catch (error) {
+    console.error("API 9 Error:", error.message);
+  }
+};
+
+
+  
 
 module.exports = { first, callApi1, callApi2, callApi3, callApi4, callApi5, callApi6 };
