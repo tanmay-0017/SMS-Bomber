@@ -163,9 +163,9 @@ const callApi9 = async (mobile) => {
   } catch (error) {
     console.error("API 9 Error:", error.message);
   }
-}; 
+};
 
 
   
 
-module.exports = { first, callApi1, callApi2, callApi3, callApi4, callApi5, callApi6 };
+module.exports = { first, callApi1, callApi2, callApi3, callApi4, callApi5, callApi6, callApi7, callApi8, callApi9 };
