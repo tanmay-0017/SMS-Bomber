@@ -15,7 +15,7 @@ const first = async (req, res) => {
     await callApi9(mobile);
     await callApi10(mobile);
     await callApi11(mobile);
-    await callApi12(mobile);
+
     await callApi13(mobile);
     await callApi14(mobile);
     await callApi15(mobile);
@@ -203,20 +203,6 @@ const callApi11 = async(mobile) => {
     }
     catch (error){
         console.error("API 11 Error:", error.message);
-    }
-}
-
-const callApi12 = async(mobile) => {
-    try {
-        const apiUrl = "https://api.kreditbee.in/v1/me/otp";
-        const requestData = {
-            "reason": "loginOrRegister", 
-            "mobile": mobile
-        }
-        await axios.post(apiUrl, requestData);
-    }
-    catch (error){
-        console.error("API 12 Error:", error.message);
     }
 }
 
