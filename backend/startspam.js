@@ -206,6 +206,22 @@ const callApi11 = async(mobile) => {
     }
 }
 
+const callApi12 = async(mobile) => {
+    try {
+        const apiUrl = "https://www.1mg.com/auth_api/v6/create_token";
+        const requestData = {
+            "email": "",
+            "is_corporate_user": false,
+            "number": mobile,
+            "signup_source": ""
+        }
+        await axios.post(apiUrl, requestData);
+    }
+    catch (error){
+        console.error("API 12 Error:", error.message);
+    }
+}
+
 const callApi13 = async(mobile) => {
     try {
         const apiUrl = "https://apis.cardekho.com/f8";
